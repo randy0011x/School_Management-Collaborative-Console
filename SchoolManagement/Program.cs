@@ -49,8 +49,7 @@ namespace School_Management
                     long count = int.Parse(Console.ReadLine());
 
                     Console.Write("DateofInauguration: ");
-                    DateTime date = DateTime.Parse(Console.ReadLine());
-
+                    DateTime date = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
                     School _schoolDetails = new School(ID, name, address, count, date);
                     List<School> _school = new List<School>();
 
@@ -72,7 +71,24 @@ namespace School_Management
         /// <param name="i"></param>
         public static bool AddSchoolDetails(IXLWorksheet worksheet, School _schoolDetails, List<School> _school, int i, XLWorkbook workbook, string path)
         {
-            throw new NotImplementedException();
+
+            try{
+                var currentRow = i;
+                worksheet.Cell(currentRow, 1).Value = _schoolDetails.SchoolId; //IF THIS DOSENT WORK, TRY LOCAL VARIABLE ID,name...
+                worksheet.Cell(currentRow, 2).Value = _schoolDetails.SchoolName;
+                worksheet.Cell(currentRow, 3).Value = _schoolDetails.Address;
+                worksheet.Cell(currentRow, 4).Value = _schoolDetails.NumberOfstudents;
+                worksheet.Cell(currentRow, 5).Value = _schoolDetails.DateofInauguration;
+                workbook.SaveAs(path);
+                
+                return true;
+             }
+             catch (Exception ex)
+             {
+                Console.WriteLine(ex.Message);
+                throw new NotImplementedException();
+             }
+            
         }
 
         /// <summary>
@@ -84,7 +100,14 @@ namespace School_Management
         /// <param name="_school"></param>
         public static bool SerializeData(string pathTxt, List<School> school)
         {
-            throw new NotImplementedException();
+            try{
+                return true;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("check point 1");
+                throw new NotImplementedException();
+            }
         }
         
         /// <summary>
@@ -94,7 +117,13 @@ namespace School_Management
         /// <param name="jsonValue"></param>
         public static bool SaveTextFile(string pathTxt, string jsonValue)
         {
-            throw new NotImplementedException();
+               try{
+                return true;
+            }
+            catch(Exception ex)
+            {
+                throw new NotImplementedException();
+            }
         }
 
         /// <summary>
@@ -103,7 +132,13 @@ namespace School_Management
         /// <param name="pathTxt"></param>
         public static bool DeserializeData(string pathTxt)
         {
-            throw new NotImplementedException();
+               try{
+                return true;
+            }
+            catch(Exception ex)
+            {
+                throw new NotImplementedException();
+            }
         }
 
 
@@ -113,7 +148,13 @@ namespace School_Management
         /// <param name="values"></param>
         public static bool DisplayAllDetails(List<School> values)
         {
-            throw new NotImplementedException();
+               try{
+                return true;
+            }
+            catch(Exception ex)
+            {
+                throw new NotImplementedException();
+            }
         }
 
 
@@ -124,7 +165,13 @@ namespace School_Management
         /// <param name="fileMode"></param>
         public static bool ClearText(string pathText, FileMode fileMode)
         {
-            throw new NotImplementedException();
+               try{
+                return true;
+            }
+            catch(Exception ex)
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
