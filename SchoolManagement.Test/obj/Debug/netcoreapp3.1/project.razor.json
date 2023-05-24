@@ -1,0 +1,20 @@
+{
+  "SerializedFilePath": "d:\\Yaksha-Phase_3\\School_Management-Collaborative-Console\\SchoolManagement.Test\\obj\\Debug\\netcoreapp3.1\\project.razor.json",
+  "FilePath": "d:\\Yaksha-Phase_3\\School_Management-Collaborative-Console\\SchoolManagement.Test\\SchoolManagement.Tests.csproj",
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 800
+  },
+  "RootNamespace": null,
+  "Documents": [],
+  "SerializationFormat": "0.3"
+}
